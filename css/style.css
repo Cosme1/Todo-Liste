@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+.addButton {
+  padding: 10px;
+  background: #d9d9d9;
+  color: #555;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5%;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.header {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.input::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.closeButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closeButton:hover {
+  background-color: #cc0000;
+}
+
+ul {
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  list-style-type: none;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 9px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  /* makes the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 5px;
+}
+
+.checkbox {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Visual cue for dragging */
+.item.dragging {
+    opacity: 0.5;
+}
+
+.item.drag-over {
+    border-top: 2px solid #007bff;
+}
